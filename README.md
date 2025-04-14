@@ -17,16 +17,19 @@ A backend application to showcase development skills.
 - GraphQL
 - TypeORM
 
-## Intall dependencies
+## Install dependencies
 
 ```bash
 npm install
+```
 
 ## Run the development server
 
 Uses ts-node-dev for auto-restart on file changes.
+
 ```bash
 npm start
+```
 
 ## Database
 
@@ -35,19 +38,19 @@ npm start
 
 ## Available GraphQL Operations
 
-1. Mutation: Add a country
-2. Query: Get all countries
-3. Query: Get country by code
-4. Query: Get countries by continent
-5. Mutation: Modify country
+1. Mutation: Add a country  
+2. Query: Get all countries  
+3. Query: Get country by code  
+4. Query: Get countries by continent  
+5. Mutation: Modify country  
 6. Mutation: Delete country by code
 
 ## Emoji
 
-Using webiste called to get the country's emojies 
-Here is the link:  https://emojipedia.org/
+Using website called Emojipedia to get the country's emojis.  
+Here is the link: [https://emojipedia.org/](https://emojipedia.org/)
 
 ## For Database table changes (adding a column)
 
-- Frist I used DROP TABLE 
-- Second I used ALTER TABLE for data loss concern
+- First I used `DROP TABLE`
+- Second I used `ALTER TABLE` to avoid data loss
