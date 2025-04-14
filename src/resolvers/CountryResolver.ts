@@ -16,6 +16,14 @@ export class CountryResolver {
         return await Country.findOne(countrySearch);
     }
 
+    @Query(() => [Country], { nullable: true })
+    async GetCountryByContinent(@Arg("continent_code") continent_code: string) {
+        const countrySearch: FindManyOptions<Country> = {
+            where: { continent_code: Like(`%${continent_code}%`) },
+        };
+        return await Country.find(countrySearch);
+    }
+
     @Mutation(() => Country)
     async AddCountry(
         @Arg("data") data: CountryInput) {
