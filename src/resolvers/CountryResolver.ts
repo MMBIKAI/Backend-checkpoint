@@ -43,4 +43,12 @@ export class CountryResolver {
         const result = await countryToUpdate.save();
         return result;
     }
+
+    @Mutation(() => String)
+    async DeleteCountry(
+        @Arg("code") code: string) {
+        const result = await Country.delete({ code: Like(`%${code}%`) });
+        if (result.affected === 1) return "Deleted Successfully"
+        else return "Country Not Found";
+    } 
 }
